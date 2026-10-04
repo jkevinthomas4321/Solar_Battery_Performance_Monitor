@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS public.generation
     ac_power double precision,
     daily_yield double precision,
     total_yield double precision,
-    CONSTRAINT generation_pkey PRIMARY KEY (date_time, plant_id)
+    CONSTRAINT generation_pkey PRIMARY KEY (date_time, plant_id, source_key)
 );
 
 -- DROP TABLE IF EXISTS public.weather;
@@ -27,8 +27,4 @@ CREATE TABLE IF NOT EXISTS public.weather
     CONSTRAINT weather_data_pkey PRIMARY KEY (date_time, plant_id)
 )
 
-TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS public.weather
-    OWNER to postgres;
 
