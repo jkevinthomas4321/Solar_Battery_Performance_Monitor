@@ -1,0 +1,9 @@
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "D", "UP", "B"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
