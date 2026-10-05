@@ -1,6 +1,7 @@
 # Ignore everything inside the data folders...
 data/raw/*
 data/processed/*
+reports/*
 
 # ...but keep the placeholder files so the folders stay in the repo
 !data/raw/.gitkeep
