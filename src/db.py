@@ -4,13 +4,13 @@ from sqlalchemy import create_engine, text
 
 load_dotenv()  # reads .env into environment variables
 
-user     = os.getenv("user")
-password = os.getenv("password")
-host     = os.getenv("host")
+username     = os.getenv("user")
+userpassword = os.getenv("password")
+hostname    = os.getenv("host")
 port     = os.getenv("port")
 dbname   = os.getenv("database")
 
-url = f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{dbname}"
+url = f"postgresql+psycopg2://{username}:{userpassword}@{hostname}:{port}/{dbname}"
 engine = create_engine(url)
 
 if __name__ == "__main__":

@@ -14,7 +14,6 @@ The raw data is **not included in this repository** (it is excluded via `.gitign
 |---|---|
 | Source | [Kaggle: Solar Power Generation Data](https://www.kaggle.com/datasets/anikannal/solar-power-generation-data) |
 | Author | anikannal |
-| Licence | _see the Kaggle dataset page_ |
 | Content | Two PV plants in India, inverter-level generation data and plant-level weather sensor data |
 | Period | 15 May 2020 – 17 June 2020 (34 days) at 15-minute intervals |
 | Location in repo | `data/raw/solar/` |
@@ -32,7 +31,6 @@ The raw data is **not included in this repository** (it is excluded via `.gitign
 |---|---|
 | Source | [Kaggle: NASA Battery Dataset](https://www.kaggle.com/datasets/patrickfleith/nasa-battery-dataset) (author: Patrick Fleith) |
 | Original data | NASA Ames Prognostics Center of Excellence (PCoE), *Li-ion Battery Aging Datasets*, B. Saha and K. Goebel (2007), [NASA Open Data Portal](https://data.nasa.gov/) |
-| Licence | _see the Kaggle dataset page_; the original NASA data is publicly released |
 | Content | CSV conversion of the original MATLAB `.mat` files: 34 cells (B0005 – B0056) cycled through charge, discharge and impedance (EIS) tests at ambient temperatures of 4, 22, 24, 43 and 44 °C until end-of-life |
 | Location in repo | `data/raw/battery/cleaned_dataset/` |
 
