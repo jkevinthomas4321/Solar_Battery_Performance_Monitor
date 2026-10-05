@@ -1,7 +1,11 @@
+# Local only: virtual environment, personal code guide, working reports
+solar_env/
+guide/
+reports/
+
 # Ignore everything inside the data folders...
 data/raw/*
 data/processed/*
-reports/*
 
 # ...but keep the placeholder files so the folders stay in the repo
 !data/raw/.gitkeep

@@ -1,0 +1,30 @@
+"""Project-wide paths, constants and analysis assumptions."""
+
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+RAW_SOLAR_DIR = ROOT_DIR / "data" / "raw" / "solar"
+PROCESSED_DIR = ROOT_DIR / "data" / "processed"
+
+PLANT_1 = 4135001
+PLANT_2 = 4136001
+
+INTERVAL_H = 0.25
+READINGS_PER_DAY = 96
+
+DAYLIGHT_START = "06:00"
+DAYLIGHT_END = "18:30"
+
+DC_SCALE_FACTOR = {PLANT_1: 10.0}
+
+SUN_THRESHOLD_ZERO_OUTPUT = 0.2
+SUN_THRESHOLD_AVAILABILITY = 0.1
+G_MIN_CAPACITY = 0.5
+GAMMA = -0.004
+MIN_DAY_COMPLETENESS = 0.9
+
+FIGURES_DIR = ROOT_DIR / "reports" / "figures"
+CLIPPING_MARGIN = 0.02
+SUSTAINED_PI_THRESHOLD = 0.9
+SUSTAINED_DAYS = 3
+UNDERPERFORMANCE_TOLERANCE = 0.03

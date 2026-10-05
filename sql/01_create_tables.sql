@@ -1,30 +1,27 @@
--- Table creation for the solar power generation and weather data
+-- =============================================================================
+-- 01_create_tables.sql
+-- Raw data tables for inverter generation and plant weather readings.
+-- =============================================================================
 
--- DROP TABLE IF EXISTS public.generation;
-
-CREATE TABLE IF NOT EXISTS public.generation
-(
-    date_time timestamp without time zone NOT NULL,
-    plant_id integer NOT NULL,
-    source_key character varying(15) COLLATE pg_catalog."default" NOT NULL,
-    dc_power double precision,
-    ac_power double precision,
-    daily_yield double precision,
-    total_yield double precision,
+-- [Q01-A] Inverter generation readings (15-minute intervals)
+CREATE TABLE IF NOT EXISTS generation (
+    date_time    TIMESTAMP        NOT NULL,
+    plant_id     INTEGER          NOT NULL,
+    source_key   VARCHAR(15)      NOT NULL,
+    dc_power     DOUBLE PRECISION,
+    ac_power     DOUBLE PRECISION,
+    daily_yield  DOUBLE PRECISION,
+    total_yield  DOUBLE PRECISION,
     CONSTRAINT generation_pkey PRIMARY KEY (date_time, plant_id, source_key)
 );
 
--- DROP TABLE IF EXISTS public.weather;
-
-CREATE TABLE IF NOT EXISTS public.weather
-(
-    date_time timestamp without time zone NOT NULL,
-    plant_id integer NOT NULL,
-    source_key character varying(15) COLLATE pg_catalog."default" NOT NULL,
-    ambient_temperature double precision,
-    module_temperature double precision,
-    irradiation double precision,
-    CONSTRAINT weather_data_pkey PRIMARY KEY (date_time, plant_id)
-)
-
-
+-- [Q01-B] Plant weather sensor readings (one sensor per plant)
+CREATE TABLE IF NOT EXISTS weather (
+    date_time            TIMESTAMP        NOT NULL,
+    plant_id             INTEGER          NOT NULL,
+    source_key           VARCHAR(15)      NOT NULL,
+    ambient_temperature  DOUBLE PRECISION,
+    module_temperature   DOUBLE PRECISION,
+    irradiation          DOUBLE PRECISION,
+    CONSTRAINT weather_pkey PRIMARY KEY (date_time, plant_id)
+);
